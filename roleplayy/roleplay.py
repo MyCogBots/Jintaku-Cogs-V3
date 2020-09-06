@@ -369,15 +369,15 @@ class Roleplay(BaseCog):
         embed.set_image(url=images[i])
         await ctx.send(embed=embed)
 
-    @commands.command()
+   @commands.command()
     @commands.bot_has_permissions(embed_links=True)
     async def kill(self, ctx, *, user: discord.Member):
-        """Kills a user!"""
+        """kill a user!"""
 
         author = ctx.message.author
-        images = await self.config.hugs()
+        images = await self.config.kill()
 
-        nekos = await self.fetch_nekos_life(ctx, "hug")
+        nekos = await self.fetch_nekos_life(ctx, "kill")
         images.extend(nekos)
 
         mn = len(images)
@@ -385,10 +385,12 @@ class Roleplay(BaseCog):
 
         # Build Embed
         embed = discord.Embed()
-        embed.description = f"**{author.mention} hugs {user.mention}**"
+        embed.description = f"**{author.mention} killed {user.mention}**"
         embed.set_footer(text="Made with the help of nekos.life")
         embed.set_image(url=images[i])
         await ctx.send(embed=embed)
+
+
 
     @commands.command()
     @commands.bot_has_permissions(embed_links=True)
