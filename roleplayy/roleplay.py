@@ -90,31 +90,6 @@ class Roleplay(BaseCog):
                 "https://cdn.weeb.sh/images/rJaog0FtZ.gif",
                 "https://cdn.weeb.sh/images/Hyv6uOQPZ.gif",
                 "https://cdn.weeb.sh/images/BJx2l0ttW.gif",
-                "https://media.giphy.com/media/iviBUyNqP46Aw/giphy.gif",
-                "https://media.giphy.com/media/wnsgren9NtITS/giphy.gif",
-                "https://media.giphy.com/media/svXXBgduBsJ1u/giphy.gif",
-                "https://media.giphy.com/media/3ZnBrkqoaI2hq/giphy.gif",
-                "https://media.giphy.com/media/3o6ZsTopjMRVkJXAWI/giphy.gif",
-                "https://media.giphy.com/media/od5H3PmEG5EVq/giphy.gif",
-                "https://media.giphy.com/media/vVA8U5NnXpMXK/giphy.gif",
-                "https://media.giphy.com/media/aVmEsdMmCTqSs/giphy.gif",
-                "https://media.giphy.com/media/ZQN9jsRWp1M76/giphy.gif",
-                "https://media.giphy.com/media/DjczAlIcyK1Co/giphy.gif",
-                "https://media.giphy.com/media/ba92ty7qnNcXu/giphy.gif",
-                "https://media.giphy.com/media/C4gbG94zAjyYE/giphy.gif",
-                "https://i.imgur.com/4Y50gzE.gif",
-                "https://i.imgur.com/OrpyAfa.gif",
-                "https://i.imgur.com/aA8mTuX.gif",
-                "https://i.imgur.com/fm9PHyr.gif",
-                "https://i.imgur.com/tCuAWNW.gif",
-                "https://i.imgur.com/BPMTcq7.gif",
-                "https://i.imgur.com/V1fd9oP.gif",
-                "https://i.imgur.com/OSDidQJ.gif",
-                "https://i.imgur.com/1RlShE9.gif",
-                "https://i.imgur.com/hM1LcZf.gif",
-                "https://i.imgur.com/cRfX87T.gif",
-                "https://cdn.weeb.sh/images/HyNJIaVCb.gif",
-                "https://cdn.weeb.sh/images/ryMqdOXvZ.gif",
                 "https://cdn.weeb.sh/images/Hk4qu_XvZ.gif",
                 "https://cdn.weeb.sh/images/ByuHsvu8z.gif",
                 "https://cdn.weeb.sh/images/Hy4hxRKtW.gif",
@@ -369,7 +344,7 @@ class Roleplay(BaseCog):
         embed.set_image(url=images[i])
         await ctx.send(embed=embed)
 
-   @commands.command()
+    @commands.command()
     @commands.bot_has_permissions(embed_links=True)
     async def kill(self, ctx, *, user: discord.Member):
         """kill a user!"""
@@ -377,7 +352,7 @@ class Roleplay(BaseCog):
         author = ctx.message.author
         images = await self.config.kill()
 
-        nekos = await self.fetch_nekos_life(ctx, "kill")
+        nekos = await self.fetch_nekos_life(ctx, "hug")
         images.extend(nekos)
 
         mn = len(images)
